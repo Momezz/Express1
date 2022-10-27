@@ -55,6 +55,13 @@ const products = [
     res.json(products);
 })
 
+app.get('/info', (req, res)=>{
+    res.send(`
+    <h1>Our store has info for ${products.length} products</h1>
+    ${date}`);
+})
+
+
   
   app.listen(port, () => {
     console.log('Servicio en puerto', port)
