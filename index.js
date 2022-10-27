@@ -50,6 +50,11 @@ const products = [
       ]
     }
   ]
+
+  app.get('/api/products', (req, res)=>{
+    res.json(products);
+})
+
   
   app.listen(port, () => {
     console.log('Servicio en puerto', port)
