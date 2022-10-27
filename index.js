@@ -61,6 +61,49 @@ app.get('/info', (req, res)=>{
     ${date}`);
 })
 
+app.get('/about', (req, res)=>{
+    res.send(`{
+        name: 'Julian Gomez',
+        age: 36,
+        email: 'julgomez14@gmail.com',
+        phone: '30000000001',
+        addres: 'Avenida siempre viava',
+        city: 'Medellin',
+        -links: [
+            -{
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/juliangm',
+            },
+            -{
+                name: 'GitHub',
+                url: 'https://www.github.com/in/juliangm',
+            },
+            {
+            name: 'Twitter',
+            url: 'https://www.twitter.com/in/juliangm',
+            },
+        ],
+        website: 'https://juliangomem.dev',
+        -skills: [
+            -{
+                name: 'javaScript',
+                level: 'junior',
+            },
+            -{
+                name: 'React',
+                level: 'junior',
+            },
+            -{
+                name: 'Node',
+                level: 'junior',
+            },
+            -{
+                name: 'HTML',
+                level: 'junior',
+            },
+        ],
+    }`)
+})
 
   
   app.listen(port, () => {
